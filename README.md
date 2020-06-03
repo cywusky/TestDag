@@ -9,5 +9,5 @@
 
 
 
-![This is a test image](/test.png)
+![This is a test image](/airflow_v2.png)
 
