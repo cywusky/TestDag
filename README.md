@@ -2,5 +2,5 @@
 test for dag
 
 
-![GitHub Logo](/test.png)
+![This is a test image](/test.png)
 
