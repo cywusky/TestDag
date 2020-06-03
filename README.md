@@ -17,10 +17,9 @@ The example template files include as follows.
 1. Create your own Dockerfile
 1. Revise docker_ecs_ecr_template.py
 You will need to revise the following args for your use.
-* Item 1: task_id: a task ID is used in Airflow
-* Item 1: default_docker_args: a dictionary to define input args
-* Item 1: dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
-
+  * task_id: a task ID is used in Airflow
+  * default_docker_args: a dictionary to define input args
+  * dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
 1. Push your codes to AirflowDags repo.
 1. Launch Airflow UI.
 1. Find your DAG through Airflow UI. Turn on the DAG, and trigger to run your DAG.
