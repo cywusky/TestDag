@@ -15,8 +15,7 @@ The example template files include as follows.
 
 ### How to Use the Template Codes and Run on Airflow:
 1. Create your own Dockerfile
-1. Revise docker_ecs_ecr_template.py
-You will need to revise the following args for your use.
+1. Revise docker_ecs_ecr_template.py: you will need to revise the following args for your use.
   * task_id: a task ID is used in Airflow
   * default_docker_args: a dictionary to define input args
   * dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
