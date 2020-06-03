@@ -2,5 +2,5 @@
 test for dag
 
 
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](/test.png)
 Format: ![Alt Text](url)
