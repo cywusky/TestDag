@@ -6,7 +6,7 @@ The following diagram illustrates the architecture of using Airflow to orchestra
 
 ![This is a test image](/airflow_v3.png)
 
-### How to Use the Tempalte Codes:
+### Tempalte Codes:
 The example template files include as follows.
 1. Dockerfile: example Dockerfile
 1. hello_world.py: example python file
