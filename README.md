@@ -8,8 +8,8 @@ The following diagram illustrates the architecture of using Airflow to orchestra
 ![System diagram for using Airflow on AWS](/image/airflow_v5.png)
 
 
-## Example Template Files
-The example template files include the three parts\. 
+## Run HelloWorld Example Files
+The example files include the three parts\. 
 1. **Dockerfile**: an example Dockerfile.
 1. **hello_world.py**: an example Python file, which acts as a data transformation file.
 1. **docker_ecs_ecr_template.py**: a template file to perform Airflow tasks. This enables data transformation performed on AWS. It enables the follwoing processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following input arguments for your own use.
