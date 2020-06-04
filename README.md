@@ -9,17 +9,17 @@ The following diagram illustrates the architecture of using Airflow to orchestra
 
 
 ## Run HelloWorld Example Files
-The example files include the three parts\. 
-##### 1. Dockerfile: an example Dockerfile.
-##### 2. hello_world.py: an example Python file, which acts as a data transformation code.
-##### 3. docker_ecs_ecr_template.py: a template file to execute Airflow tasks, which enables data transformation performed on AWS. <br> 
+The example files include the three parts. 
+1. Dockerfile: an example Dockerfile.
+2. hello_world.py: an example Python file, which acts as a data transformation code.
+3. docker_ecs_ecr_template.py: a template file to execute Airflow tasks, which enables data transformation performed on AWS. 
 
 Airflow on EC2 will orchestrate the follwoing processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following input arguments for your own use. 
 
 
 ``` 
-- task_id: a task ID is used in Airflow <br>
-- default_docker_args: a dictionary to define input arguments for tasks on ECR, ECS <br>
+- task_id: a task ID is used in Airflow
+- default_docker_args: a dictionary to define input arguments for tasks on ECR, ECS
 - dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
 ```
 
