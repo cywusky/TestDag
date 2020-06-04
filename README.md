@@ -26,7 +26,7 @@ For more information about the input args to registera an ECS task,
 ## How to Use the Template Codes and Run on Airflow
 1. Create your own ```Dockerfile```
 1. Create your own template file based on  ```docker_ecs_ecr_template.py```
-1. Push your codes to AirflowDags repo. 
+1. Push your codes for data transformation, as well as Dockerfile and the revised template file to AirflowDags repo. 
 1. Verify your newly pushed codes exist on EC2 under the following folder ``` ~/airflow/dags/AirflowDags ```
 1. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
 1. Find your DAG through Airflow UI. Turn on the DAG, and trigger to run your DAG.
