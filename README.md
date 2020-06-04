@@ -14,9 +14,9 @@ The following diagram illustrates the architecture of using Airflow to orchestra
 2. hello_world.py: an example Python file, which acts as a data transformation code.
 3. docker_ecs_ecr_template.py: a template file to execute Airflow tasks, which enables data transformation performed on AWS. 
 
-Airflow on EC2 will orchestrate the follwoing processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. See the diagram above for more details. <br> 
+Airflow on EC2 will orchestrate the following processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. See the diagram above for more details. <br> 
 
-You will need to revise the following input arguments in ```docker_ecs_ecr_template.py ``` for your own use. 
+You will need to revise the following input arguments in ```docker_ecs_ecr_template.py ``` for your use. 
 
 ``` 
 - task_id: a task ID is used in Airflow
@@ -33,11 +33,13 @@ More information about the input arguments to
 1. Choose ``` dcoker_ecs_ecr_template_demo ```
 1. Turn **On** button for ``` dcoker_ecs_ecr_template_demo ```. Then click **Trigger DAG**.
 1. You can choose **Graph View** to monitor the 3 subprocesses in a DAG.
-1. After all of the three subprocess succeed, you can verify whether a Docker image is pushed to ECR, and an ECS task is created via AWS concole.
+1. After all of the three subprocesses succeed, you can verify whether a Docker image is pushed to ECR, and an ECS task is created via AWS console.
 
-* Go to ECR: check if the Repository``` fst-airflow/dev/demo ``` exisits
-* Click ``` fst-airflow/dev/demo ``` repository, verify if a Docker image exisit.
-* Go to ECS: under Task Definitions, choose *airflow* 
+* Go to ECR: check if the Repository ``` fst-airflow/dev/demo ``` exists.
+* Click ``` fst-airflow/dev/demo ``` repository, verify if a Docker image exists.
+* Go to ECS: under Task Definitions, choose *airflow* and verify if a new task is created.
+* Go to ECS: choose **Clusters**. Choose fargate cluster.
+* Click **Tasks** tab, verify if there is a Task with Task definition starting with *airflow*. You can moinotor the task status.
 
 ## How to Use the Template Files and Run Transformation on Airflow
 1. Create a ```Dockerfile```
