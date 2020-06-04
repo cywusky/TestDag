@@ -4,7 +4,7 @@
 
 The following diagram illustrates the architecture of using Airflow to orchestrate data Transformation on AWS.
 
-![This is a test image](/airflow_v3.png)
+![This is a test image](/image/airflow_v3.png)
 
 ### Tempalte Codes:
 The example template files include as follows.
