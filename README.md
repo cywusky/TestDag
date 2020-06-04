@@ -29,11 +29,11 @@ More information about the input arguments to
 
 ### Run Hello World Example
 1. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
-1. Click ```DAGs``` on the menu bar.
+1. Click **DAGs** on the menu bar.
 1. Choose ``` dcoker_ecs_ecr_template_demo ```
-1. Turn **On** button for ``` dcoker_ecs_ecr_template_demo ```. Then click **Trigger DAG**.
-1. You can choose **Graph View** to monitor the 3 subprocesses in a DAG.
-1. After all of the three subprocesses succeed, you can verify whether a Docker image is pushed to ECR, and an ECS task is created via AWS console.
+1. Turn ```On``` button for ``` dcoker_ecs_ecr_template_demo ```. Then click **Trigger DAG**.
+1. You can choose ```Graph View``` to monitor the 3 subprocesses in a DAG.
+1. You can also verify whether a Docker image is pushed to ECR, and an ECS task is created via AWS console.
 
 * Go to ECR: check if the Repository ``` fst-airflow/dev/demo ``` exists.
 * Click ``` fst-airflow/dev/demo ``` repository, verify if a Docker image exists.
