@@ -12,7 +12,7 @@ The following diagram illustrates the architecture of using Airflow to orchestra
 The example template files include the three parts\. 
 * **Dockerfile**: an example Dockerfile.
 * **hello_world.py**: an example Python file, which acts as data transformation file.
-* **docker_ecs_ecr_template.py**: a template file to perform Airflow tasks. This allows data transformation performed on AWS.This tempalte file will allow the follwing processes:A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following args for your use.
+* **docker_ecs_ecr_template.py**: a template file to perform Airflow tasks. This enables data transformation performed on AWS. This tempalte file will allow the follwing processes:A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following args for your use.
 
 ``` 
 task_id: a task ID is used in Airflow
