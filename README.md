@@ -20,7 +20,8 @@ default_docker_args: a dictionary to define input args
 dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
 ```
 
-For more information about the input args to registera an ECS task, ![More] (https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition)
+For more information about the input args to registera an ECS task, 
+![More] (https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition)
 
 ## How to Use the Template Codes and Run on Airflow
 1. Create your own ```Dockerfile```
