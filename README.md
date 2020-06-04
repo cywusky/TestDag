@@ -20,7 +20,7 @@ You will need to revise the following input arguments in ```docker_ecs_ecr_templ
 
 ``` 
 - task_id: a task ID is used in Airflow
-- default_docker_args: a dictionary to define input arguments for tasks on ECR, ECS
+- default_docker_args: a dictionary to define input arguments used on ECR, ECS
 - dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
 ```
 
@@ -29,7 +29,7 @@ More information about the input arguments to
 
 ### Run Hello World Example
 1. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
-1. Click 'DAGs' on the menu bar.
+1. Click ```DAGs``` on the menu bar.
 1. Choose ``` dcoker_ecs_ecr_template_demo ```
 1. Turn **On** button for ``` dcoker_ecs_ecr_template_demo ```. Then click **Trigger DAG**.
 1. You can choose **Graph View** to monitor the 3 subprocesses in a DAG.
@@ -38,14 +38,14 @@ More information about the input arguments to
 * Go to ECR: check if the Repository ``` fst-airflow/dev/demo ``` exists.
 * Click ``` fst-airflow/dev/demo ``` repository, verify if a Docker image exists.
 * Go to ECS: under Task Definitions, choose *airflow* and verify if a new task is created.
-* Go to ECS: choose **Clusters**. Choose fargate cluster.
-* Click **Tasks** tab, verify if there is a Task with Task definition starting with *airflow*. You can moinotor the task status.
+* Go to ECS: choose **Clusters**. Choose ```fargate``` cluster.
+* Click **Tasks** tab, verify if there is a Task with Task definition starting with *airflow*. You can select that task and moinotor the task status.
 
 ## How to Use the Template Files and Run Transformation on Airflow
 1. Create a ```Dockerfile```.
 1. Create a revised template file based on  ```docker_ecs_ecr_template.py```.
 1. Push the codes for data transformation, Dockerfile, and the revised template file to ```AirflowDags``` repo. 
-1. Verify all of your newly pushed codes exist on EC2 under the following folder ``` ~/airflow/dags/AirflowDags ```. This can be achieved via SSH connection to the EC2 instance.
+1. Verify all of your newly pushed codes exist on EC2 under the folder ``` ~/airflow/dags/AirflowDags ```. This can be achieved via SSH connection to the EC2 instance.
 1. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
 1. Find your DAG. Turn ON the DAG, and Trigger the DAG.
 1. Verify the result from Airflow UI, as well as from ECR, ECS through AWS console.
