@@ -1,7 +1,7 @@
 # AirflowDAGs
 This repository automatically syncs with the Airflow instance running on AWS every minute on the master branch.
 
-## Using Airflow to Orchestrate Data Transformation on AWS
+## Architecture
 The following diagram illustrates the architecture of using Airflow to orchestrate data transformation on AWS.
 
 
@@ -10,9 +10,9 @@ The following diagram illustrates the architecture of using Airflow to orchestra
 
 ## Template Codes
 The example template files include:
-- Dockerfile: example Dockerfile.
-- hello_world.py: example python file.
-- docker_ecs_ecr_template.py: template file to perform Airflow tasks. This allows data transformation performed on AWS. A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following args for your use.
+* Dockerfile: example Dockerfile.
+* hello_world.py: example python file.
+* docker_ecs_ecr_template.py: template file to perform Airflow tasks. This allows data transformation performed on AWS. A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following args for your use.
 
 ``` 
 task_id: a task ID is used in Airflow
