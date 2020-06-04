@@ -8,8 +8,8 @@ The following diagram illustrates the architecture of using Airflow to orchestra
 ![System diagram for using Airflow on AWS](/image/airflow_v6.png)
 
 
-## Hello World Example Files
-The hello world example files include the three parts. 
+## Hello World Example
+#### The hello world example files include the three parts. 
 1. Dockerfile: an example Dockerfile.
 2. hello_world.py: an example Python file, which acts as a data transformation code.
 3. docker_ecs_ecr_template.py: a template file to execute Airflow tasks, which enables data transformation performed on AWS. 
