@@ -9,12 +9,12 @@ The following diagram illustrates the architecture of using Airflow to orchestra
 
 
 ## Hello World Example
-#### The hello world example files include the three parts. 
+### The hello world example files include the three parts. 
 1. Dockerfile: an example Dockerfile.
 2. hello_world.py: an example Python file, which acts as a data transformation code.
 3. docker_ecs_ecr_template.py: a template file to execute Airflow tasks, which enables data transformation performed on AWS. 
 
-Airflow on EC2 will orchestrate the follwoing processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following input arguments in ```docker_ecs_ecr_template.py ``` for your own use. 
+Airflow on EC2 will orchestrate the follwoing processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. See the diagram above for more details. You will need to revise the following input arguments in ```docker_ecs_ecr_template.py ``` for your own use. 
 
 
 ``` 
@@ -22,12 +22,15 @@ Airflow on EC2 will orchestrate the follwoing processes: A Docker image is built
 - default_docker_args: a dictionary to define input arguments for tasks on ECR, ECS
 - dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
 ```
-* More information about the input arguments to 
+More information about the input arguments to 
 [register an ECS task using boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition)
 
-* More information about the input arguments to 
-[register an ECS task using boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition)
-
+### Run Hello World Example
+1. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
+1. Click 'DAGs' on the menu bar.
+1. Choose ``` dcoker_ecs_ecr_template_demo ```
+1. Turn **On** button for ``` dcoker_ecs_ecr_template_demo ```. Then click **Trigger DAG**.
+1. You can choose **Graph View** to monitor each sub process in a DAG.
 
 ## How to Use the Template Codes and Run on Airflow
 1. Create a ```Dockerfile```
