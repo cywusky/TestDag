@@ -22,8 +22,8 @@ Airflow on EC2 will orchestrate the follwoing processes: A Docker image is built
 ``` dagName ```: DAG name is used in Airflow. This is what you will see on Airflow UI.
 
 
-For more information about the input arguments to register an ECS task,
-[please check here](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition).
+
+[Check more information about how to use input arguments to register an ECS task.](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition).
 
 
 ## How to Use the Template Codes and Run on Airflow
