@@ -11,8 +11,8 @@ The following diagram illustrates the architecture of using Airflow to orchestra
 ## Example Template Files
 The example template files include the three parts\. 
 * **Dockerfile**: an example Dockerfile.
-* **hello_world.py**: an example Python file, which acts as data transformation file.
-* **docker_ecs_ecr_template.py**: a template file to perform Airflow tasks. This enables data transformation performed on AWS. It enables the follwing processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following input arguments for your own use.
+* **hello_world.py**: an example Python file, which acts as a data transformation file.
+* **docker_ecs_ecr_template.py**: a template file to perform Airflow tasks. This enables data transformation performed on AWS. It enables the follwoing processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following input arguments for your own use.
 
 ``` 
 task_id: a task ID is used in Airflow
@@ -26,7 +26,7 @@ For more information about the input arguments to register an ECS task,
 
 ## How to Use the Template Codes and Run on Airflow
 1. Create a ```Dockerfile```
-1. Create a template file based on  ```docker_ecs_ecr_template.py```
+1. Create a revised template file based on  ```docker_ecs_ecr_template.py```
 1. Push the codes for data transformation, Dockerfile, and the revised template file to AirflowDags repo. 
 1. Verify all of your newly pushed codes exist on EC2 under the following folder ``` ~/airflow/dags/AirflowDags ```.
 1. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
