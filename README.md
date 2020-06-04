@@ -33,8 +33,7 @@ Airflow on EC2 will orchestrate the following processes: A Docker image is built
 
 ## How to Use the Template Files and Run Transformation on Airflow
 1. Create a ```Dockerfile```.
-1. Create a revised template file based on  ```docker_ecs_ecr_template.py```.
-You will need to revise the following input arguments in ```docker_ecs_ecr_template.py ``` for your use. 
+2. Create a revised template file based on  ```docker_ecs_ecr_template.py```. You will need to revise the following input arguments for your use. 
 
 ``` 
 - task_id: a task ID is used in Airflow
@@ -45,8 +44,8 @@ You will need to revise the following input arguments in ```docker_ecs_ecr_templ
 More information about the input arguments to 
 [register an ECS task using boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition)
 
-1. Push the codes for data transformation, Dockerfile, and the revised template file to ```AirflowDags``` repo. 
-1. Verify all of your newly pushed codes exist on EC2 under the folder ``` ~/airflow/dags/AirflowDags ```. This can be achieved via SSH connection to the EC2 instance.
-1. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
-1. Find your DAG. Turn ON the DAG, and Trigger the DAG.
+3. Push the codes for data transformation, Dockerfile, and the revised template file to ```AirflowDags``` repo. 
+4. Verify all of your newly pushed codes exist on EC2 under the folder ``` ~/airflow/dags/AirflowDags ```. This can be achieved via SSH connection to the EC2 instance.
+5. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
+6. Find your DAG. Turn ON the DAG, and Trigger the DAG.
 1. Verify the result from Airflow UI, as well as from ECR, ECS through AWS console.
