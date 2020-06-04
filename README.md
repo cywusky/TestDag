@@ -29,7 +29,7 @@ Airflow on EC2 will orchestrate the following processes: A Docker image is built
 * Click ``` fst-airflow/dev/demo ``` repository, verify if a Docker image exists.
 * Go to ECS: under Task Definitions, choose ```airflow``` and verify if a new task is created.
 * Go to ECS: choose ```Clusters```. Choose ```fargate``` cluster.
-* Click ```Tasks``` tab, select a Task with its Task Definition starting with ```airflow```. You can select that task and moinotor its status.
+* Click ```Tasks``` tab, select a Task with its Task Definition starting with ```airflow```. You can select that task and monitor its status.
 
 ## How to Use the Template Files and Run Transformation on Airflow
 
