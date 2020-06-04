@@ -16,7 +16,7 @@ The example template files include the three parts\.
 
 
 ``` task_id```: a task ID is used in Airflow <br>
-``` default_docker_args ```: a dictionary to define input arguments for tasks on ECR, ECS
+``` default_docker_args ```: a dictionary to define input arguments for tasks on ECR, ECS <br>
 ``` dagName ```: DAG name is used in Airflow. This is what you will see on Airflow UI.
 
 
