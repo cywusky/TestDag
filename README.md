@@ -12,7 +12,7 @@ The following diagram illustrates the architecture of using Airflow to orchestra
 The example template files include the three parts\. 
 * **Dockerfile**: an example Dockerfile.
 * **hello_world.py**: an example Python file, which acts as data transformation file.
-* **docker_ecs_ecr_template.py**: a template file to perform Airflow tasks. This enables data transformation performed on AWS. This tempalte file will allow the follwing processes:A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following args for your use.
+* **docker_ecs_ecr_template.py**: a template file to perform Airflow tasks. This enables data transformation performed on AWS. This tempalte file will enable the follwing processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following input arguments for your own use.
 
 ``` 
 task_id: a task ID is used in Airflow
@@ -20,10 +20,9 @@ default_docker_args: a dictionary to define input arguments
 dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
 ```
 
-For more information about the input args to registera an ECS task, 
-[input args from AWS](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition)
-[input args from AWS]
-(https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecr.html)
+For more information about the input arguments to register an ECS task, please check here.
+[please check here.](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition)
+
 
 ## How to Use the Template Codes and Run on Airflow
 1. Create your own ```Dockerfile```
