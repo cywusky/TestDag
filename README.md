@@ -39,10 +39,11 @@ More information about the input arguments to
 * Click ``` fst-airflow/dev/demo ``` repository, verify if a Docker image exisit.
 * Go to ECS: under Task Definitions, choose *airflow* 
 
-## How to Use the Template Codes and Run on Airflow
+## How to Use the Template Files and Run Transformation on Airflow
 1. Create a ```Dockerfile```
 1. Create a revised template file based on  ```docker_ecs_ecr_template.py```
 1. Push the codes for data transformation, Dockerfile, and the revised template file to ```AirflowDags``` repo. 
 1. Verify all of your newly pushed codes exist on EC2 under the following folder ``` ~/airflow/dags/AirflowDags ```. This can be ahicved via SSH connection to the EC2 instance.
 1. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
-1. Find your DAG through Airflow UI. Turn ON the DAG, and Trigger the DAG.
+1. Find your DAG. Turn ON the DAG, and Trigger the DAG.
+1. Verify the result from Airflow UI, as well as from ECR, ECS through AWS console.
