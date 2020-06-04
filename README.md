@@ -17,13 +17,14 @@ The example files include the three parts\.
 Airflow on EC2 will orchestrate the follwoing processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. You will need to revise the following input arguments for your own use. 
 
 
-``` task_id```: a task ID is used in Airflow <br>
-``` default_docker_args ```: a dictionary to define input arguments for tasks on ECR, ECS <br>
-``` dagName ```: DAG name is used in Airflow. This is what you will see on Airflow UI.
+``` 
+task_id: a task ID is used in Airflow <br>
+default_docker_args: a dictionary to define input arguments for tasks on ECR, ECS <br>
+dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
+```
 
 
-
-[Check more information about how to use input arguments to register an ECS task.](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition).
+Check more information about how to use input arguments to [register an ECS task using boto3]. (https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition).
 
 
 ## How to Use the Template Codes and Run on Airflow
