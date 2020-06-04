@@ -22,7 +22,10 @@ Airflow on EC2 will orchestrate the follwoing processes: A Docker image is built
 - default_docker_args: a dictionary to define input arguments for tasks on ECR, ECS
 - dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
 ```
-More information about the input arguments to 
+* More information about the input arguments to 
+[register an ECS task using boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition)
+
+* More information about the input arguments to 
 [register an ECS task using boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition)
 
 
