@@ -5,7 +5,7 @@ This repository automatically syncs with the Airflow instance running on AWS eve
 The following diagram illustrates the architecture of using Airflow to orchestrate data transformation on AWS.
 
 
-![System diagram for using Airflow on AWS](/airflow_v3.png)
+![System diagram for using Airflow on AWS](/image/airflow_v4.png)
 
 
 ## Template Codes
