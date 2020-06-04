@@ -16,16 +16,6 @@ The following diagram illustrates the architecture of using Airflow to orchestra
 
 Airflow on EC2 will orchestrate the following processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. See the diagram above for more details. <br> 
 
-You will need to revise the following input arguments in ```docker_ecs_ecr_template.py ``` for your use. 
-
-``` 
-- task_id: a task ID is used in Airflow
-- default_docker_args: a dictionary to define input arguments used on ECR, ECS
-- dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
-```
-
-More information about the input arguments to 
-[register an ECS task using boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition)
 
 ### Run Hello World Example
 1. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
@@ -44,6 +34,17 @@ More information about the input arguments to
 ## How to Use the Template Files and Run Transformation on Airflow
 1. Create a ```Dockerfile```.
 1. Create a revised template file based on  ```docker_ecs_ecr_template.py```.
+You will need to revise the following input arguments in ```docker_ecs_ecr_template.py ``` for your use. 
+
+``` 
+- task_id: a task ID is used in Airflow
+- default_docker_args: a dictionary to define input arguments used on ECR, ECS
+- dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
+```
+
+More information about the input arguments to 
+[register an ECS task using boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecs.html#ECS.Client.register_task_definition)
+
 1. Push the codes for data transformation, Dockerfile, and the revised template file to ```AirflowDags``` repo. 
 1. Verify all of your newly pushed codes exist on EC2 under the folder ``` ~/airflow/dags/AirflowDags ```. This can be achieved via SSH connection to the EC2 instance.
 1. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
