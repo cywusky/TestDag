@@ -33,8 +33,11 @@ More information about the input arguments to
 1. Choose ``` dcoker_ecs_ecr_template_demo ```
 1. Turn **On** button for ``` dcoker_ecs_ecr_template_demo ```. Then click **Trigger DAG**.
 1. You can choose **Graph View** to monitor the 3 subprocesses in a DAG.
-1. After all of the three subprocess succeed, go to 
-* Item: ``` fst-airflow/dev/demo ```
+1. After all of the three subprocess succeed, you can verify whether a Docker image is pushed to ECR, and an ECS task is created via AWS concole.
+
+* Go to ECR: check if the Repository``` fst-airflow/dev/demo ``` exisits
+* Click ``` fst-airflow/dev/demo ``` repository, verify if a Docker image exisit.
+* Go to ECS: under Task Definitions, choose *airflow* 
 
 ## How to Use the Template Codes and Run on Airflow
 1. Create a ```Dockerfile```
