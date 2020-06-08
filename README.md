@@ -38,7 +38,7 @@ Airflow on EC2 will orchestrate the following processes: A Docker image is built
 
 ## How to Use the Template Files and Run Transformation on Airflow
 
-1. Create a folder, which will include Dockerfile, template file, and your data transformation codes later.
+1. Create a folder, which will include Dockerfile, a template file, and data transformation codes later.
 2. Revised template file based on  ```docker_ecs_ecr_template.py```. You will need to revise the following input arguments for your use. 
 
 ``` 
@@ -54,4 +54,4 @@ More information about the input arguments to
 6. Launch [Airflow UI](https://fst-apc-airflow.agro.services/admin/).
 7. Find your DAG. Turn ON the DAG, and Trigger the DAG.
 8. Verify the result from Airflow UI.
-9. Verify the result from ECR, ECS, the logs from CloudWatch through AWS console..
+9. Verify the result from ECR, ECS, the logs from CloudWatch through AWS console.
