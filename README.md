@@ -6,7 +6,7 @@ This repository automatically syncs with the Airflow instance running on AWS eve
 ##  Using Airflow to Orchestrate Data Transformation on AWS
 
 Airflow uses directed acyclic graphs (DAGs) to manage and monitor workflow orchestration. <br>
-Here, the following diagram illustrates the architecture of using Airflow to orchestrate data transformation on AWS using ECS Fargate. <br>
+The following diagram illustrates the architecture of using Airflow to orchestrate data transformation on AWS using ECS Fargate. <br>
 
 
 ![System diagram for using Airflow on AWS](/image/airflow_v6.png)
@@ -18,7 +18,7 @@ Here, the following diagram illustrates the architecture of using Airflow to orc
 2. hello_world.py: an example Python file, which acts as a data transformation code.
 3. docker_ecs_ecr_template.py: a template file to execute Airflow tasks, which enables data transformation performed on AWS. 
 
-Airflow on EC2 will orchestrate the following processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate. See the diagram above for more details. <br> 
+Airflow on EC2 will orchestrate the following processes: A Docker image is built on EC2, then pushed to ECR. Finally, a Docker container is run on ECS, using Fargate.  Please refer to the diagram above. <br> 
 
 
 ### Run Hello World Example
