@@ -1,11 +1,13 @@
 # AirflowDAGs
+
+The repository provides a template to build data transformation processes in a scalable and flexible fashion on AWS using Airflow. <br>
 This repository automatically syncs with the Airflow instance running on AWS every minute on the master branch. <br> 
-The repo provides template to build your own data transformation process in a scalable and flexible way on AWS using Airflow. <br>
 
 ##  Using Airflow to Orchestrate Data Transformation on AWS
 
 Airflow uses directed acyclic graphs (DAGs) to manage and monitor workflow orchestration. <br>
-The following diagram illustrates the architecture of using Airflow to orchestrate data transformation on AWS. <br>
+Here, the following diagram illustrates the architecture of using Airflow to orchestrate data transformation on AWS using ECS with Fargate. <br>
+
 
 ![System diagram for using Airflow on AWS](/image/airflow_v6.png)
 
@@ -32,6 +34,7 @@ Airflow on EC2 will orchestrate the following processes: A Docker image is built
 * Go to ECS: under Task Definitions, choose ```airflowhelloworld``` and verify if a new task is created.
 * Go to ECS: choose ```Clusters```. Choose ```fargate``` cluster.
 * Click ```Tasks``` tab, select a Task with its Task Definition starting with ```airflowhelloworld```. You can select that task and monitor its status.
+* Check the logs from CloudWatch. Search for ``` airflow-tasks ``` Log groups.
 
 ## How to Use the Template Files and Run Transformation on Airflow
 
