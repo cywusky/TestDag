@@ -36,9 +36,8 @@ Airflow on EC2 will orchestrate the following processes: A Docker image is built
 1. Create a revised template file based on  ```docker_ecs_ecr_template.py```. You will need to revise the following input arguments for your use. 
 
 ``` 
-- task_id: a task ID is used in Airflow
-- default_docker_args: a dictionary to define input arguments used on ECR, ECS
-- dagName: DAG name is used in Airflow. This is what you will see on Airflow UI.
+- DIR_NAME: directory name. where the transformation code.
+
 ```
 
 More information about the input arguments to 
