@@ -1,7 +1,7 @@
 # AirflowDAGs
 This repository automatically syncs with the Airflow instance running on AWS every minute on the master branch.
 
-##  Using Airflow to Orchestrate Data Transformation on AWS.
+##  Using Airflow to Orchestrate Data Transformation on AWS
 The following diagram illustrates the architecture of using Airflow to orchestrate data transformation on AWS.
 
 
