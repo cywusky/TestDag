@@ -1,6 +1,6 @@
 # AirflowDAGs
 
-The repository provides a template to build data transformation processes in a scalable and flexible fashion on AWS using Airflow. <br>
+The repository provides a template to build data transformation processes in a scalable and flexible way on AWS using Airflow. <br>
 This repository automatically syncs with the Airflow instance running on AWS every minute on the master branch. <br> 
 
 ##  Using Airflow to Orchestrate Data Transformation on AWS
